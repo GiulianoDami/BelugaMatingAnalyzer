@@ -1,0 +1,45 @@
+{
+    "language": "TypeScript",
+    "dependency_file": "package.json",
+    "dependencies": ["typescript", "@types/node"],
+    "files": [
+        {
+            "path": "src/BelugaPopulationAnalyzer.ts",
+            "description": "Main class for analyzing beluga whale mating patterns and genetic diversity",
+            "exports": ["class BelugaPopulationAnalyzer"]
+        },
+        {
+            "path": "src/types/BelugaSample.ts",
+            "description": "Type definitions for beluga DNA sample data",
+            "exports": ["interface BelugaSample", "interface MatingPatternResult"]
+        },
+        {
+            "path": "src/services/MatingPatternService.ts",
+            "description": "Service for identifying mating patterns and mate switching behaviors",
+            "exports": ["class MatingPatternService"],
+            "imports_from_other_files": ["../types/BelugaSample"]
+        },
+        {
+            "path": "src/services/GeneticDiversityService.ts",
+            "description": "Service for calculating genetic diversity metrics",
+            "exports": ["class GeneticDiversityService"],
+            "imports_from_other_files": ["../types/BelugaSample"]
+        },
+        {
+            "path": "src/services/InbreedingRiskService.ts",
+            "description": "Service for detecting potential inbreeding risks",
+            "exports": ["class InbreedingRiskService"],
+            "imports_from_other_files": ["../types/BelugaSample"]
+        },
+        {
+            "path": "src/index.ts",
+            "description": "Entry point for the module, exporting main functionality",
+            "imports_from_other_files": [
+                "./BelugaPopulationAnalyzer",
+                "./services/MatingPatternService",
+                "./services/GeneticDiversityService",
+                "./services/InbreedingRiskService"
+            ]
+        }
+    ]
+}
