@@ -1,0 +1,25 @@
+{
+  "name": "belugamatinganalyzer",
+  "version": "1.0.0",
+  "description": "A TypeScript-based tool for analyzing beluga whale mating patterns and genetic diversity in Arctic populations",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "beluga",
+    "whale",
+    "mating",
+    "genetics",
+    "arctic",
+    "research"
+  ],
+  "author": "Beluga Research Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.11.0"
+  }
+}
